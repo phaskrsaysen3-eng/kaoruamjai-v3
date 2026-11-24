@@ -1,0 +1,26 @@
+{
+  "id": "/app",
+  "name": "ก้าวรวมใจ",
+  "short_name": "ก้าวรวมใจ",
+  "description": "เดินจริง ตัวละครเติบโต ชวนเพื่อนมาเดินเป็นก๊วน",
+  "start_url": "./app#/step",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F5F7F2",
+  "theme_color": "#15803D",
+  "lang": "th",
+  "dir": "ltr",
+  "categories": ["health", "lifestyle"],
+  "icons": [
+    { "src": "img/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "ก้าว · สุขภาพกาย", "short_name": "ก้าว", "url": "./app#/step", "icons": [{ "src": "img/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "ตัวละคร · สุขภาพใจ", "short_name": "ตัวละคร", "url": "./app#/me", "icons": [{ "src": "img/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "ก๊วน · สุขภาพสังคม", "short_name": "ก๊วน", "url": "./app#/team", "icons": [{ "src": "img/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

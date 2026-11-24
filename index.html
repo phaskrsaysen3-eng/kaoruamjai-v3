@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#15803D">
+<meta name="color-scheme" content="light">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ก้าวรวมใจ">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="th_TH">
+<meta property="og:site_name" content="ก้าวรวมใจ">
+<meta property="og:url" content="https://kaoruamjai.aurum-storefront.workers.dev/">
+<meta property="og:title" content="ก้าวรวมใจ — เดินจริง ตัวละครโต ชวนเพื่อนเดินเป็นก๊วน">
+<meta property="og:description" content="ตัวหนีบนับก้าวสำหรับผู้สูงอายุ เดินจริงแล้วตัวละครโต และชวนเพื่อนมาเดินเป็นก๊วน ไม่ต้องใช้มือถือ">
+<meta property="og:image" content="https://kaoruamjai.aurum-storefront.workers.dev/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ก้าวรวมใจ ตัวละครโบกมือข้างหน้าจอแอป ภารกิจเดิน 15 นาที">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+<title>ก้าวรวมใจ — เดินจริง ตัวละครโต ชวนเพื่อนเดินเป็นก๊วน</title>
+<meta name="description" content="ตัวหนีบนับก้าวสำหรับผู้สูงอายุ เดินจริงแล้วตัวละครโต และชวนเพื่อนมาเดินเป็นก๊วน ไม่ต้องใช้มือถือ">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap" media="print" data-font>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Noto+Sans+Thai+Looped:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/boot.js"></script>
+</head>
+<body class="page">
+<a class="skip" href="#main">ข้ามไปเนื้อหา</a>
+
+<header class="site-head" id="head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="38" height="38"><span>ก้าวรวมใจ</span></a>
+    <nav class="site-nav" aria-label="เมนูเว็บไซต์">
+      <a href="./" aria-current="page">หน้าแรก</a>
+      <a href="app">แอป</a>
+      <a href="credits">เครดิต</a>
+    </nav>
+  </div>
+  <div class="trail" aria-hidden="true"><i id="trail"></i></div>
+</header>
+
+<main id="main">
+  <section class="lhero">
+    <div class="wrap lhero-grid">
+      <div class="lhero-text">
+        <h1><span class="ln">เดินจริง</span><span class="ln"><em>ตัวละครโต</em></span><span class="ln"><span class="nb">ชวนเพื่อน</span><span class="nb">เดินเป็นก๊วน</span></span></h1>
+        <p class="ln">ตัวหนีบนับก้าวสำหรับผู้สูงอายุ<br>ไม่ต้องใช้มือถือ</p>
+        <a class="btn-cta ln" href="app#/step">ลองใช้แอป</a>
+      </div>
+      <div class="scene-art" id="scene">
+        <span class="sun" data-depth="10"></span>
+        <span class="cloud c1"></span><span class="cloud c2"></span>
+        <span class="hill" data-depth="4"></span><span class="hill two" data-depth="7"></span>
+        <img class="phone-shot" data-depth="14" src="img/app-step.webp" width="600" height="1298" alt="หน้าแรกของแอป: ภารกิจเดิน 15 นาที และปุ่มเริ่มเดิน">
+        <img class="walker" src="assets/character/run.png" alt="" aria-hidden="true">
+        <button class="buddy" id="buddy" type="button" aria-label="แตะตัวละคร"><img src="assets/character/greet.png" alt=""></button>
+        <span class="say" id="say" role="status"></span>
+        <span class="hint" aria-hidden="true">แตะฉันสิ</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-why">
+    <div class="wrap">
+      <h2 id="h-why" data-anim>ทำไมต้องเดินด้วยกัน</h2>
+      <ul class="numbers">
+        <li data-anim><b data-count="37.9" data-dec="1" data-suffix="%">37.9%</b><span>ของผู้สูงอายุไทยเท่านั้น ที่ออกกำลังกายเป็นประจำ</span><a class="srcl" href="credits#src-nso">สำนักงานสถิติแห่งชาติ 2567</a></li>
+        <li data-anim style="--d:.12s"><b>สูงสุด 1 ใน 3</b><span class="people" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>ของผู้สูงอายุทั่วโลก โดดเดี่ยวทางสังคม</span><a class="srcl" href="credits#src-who">องค์การอนามัยโลก 2568</a></li>
+        <li data-anim style="--d:.24s"><b data-count="121921">121,921</b><span>คดีหลอกลวงออนไลน์ แค่ 4 เดือนแรกของปี 2569</span><a class="srcl" href="credits#src-acsc">ศูนย์ต่อต้านการฉ้อโกงออนไลน์ ตร.</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block soft" aria-labelledby="h-parts">
+    <div class="wrap">
+      <h2 id="h-parts" data-anim>มี 3 ส่วน</h2>
+      <div class="zig" data-part="body">
+        <img data-anim="left" class="tilt" src="img/app-step.webp" width="600" height="1298" loading="lazy" alt="หน้าแอป: ภารกิจเดิน 15 นาที และปุ่มเริ่มเดิน">
+        <div data-anim="right"><span class="kind">กาย</span><h3>ตัวหนีบนับก้าว</h3><p>หนีบไว้ที่เอว เดินจริงถึงนับ เขย่ามือไม่นับ</p><a href="app#/step">ดูในแอป</a></div>
+      </div>
+      <div class="zig flip" data-part="mind">
+        <img data-anim="right" class="tilt" src="img/app-me.webp" width="600" height="1298" loading="lazy" alt="หน้าตัวละคร: เลเวล 7 ขั้นนักเดินประจำ">
+        <div data-anim="left"><span class="kind">ใจ</span><h3>ตัวละครโตได้</h3><p>เดินครบภารกิจ ตัวละครก็โตขึ้นทีละขั้น</p><a href="app#/me">ดูในแอป</a></div>
+      </div>
+      <div class="zig" data-part="social">
+        <img data-anim="left" class="tilt" src="img/app-team.webp" width="600" height="1298" loading="lazy" alt="หน้าก๊วน: ก๊วนบ้านสวน 5 คน อันดับ 1 ของตำบล">
+        <div data-anim="right"><span class="kind">สังคม</span><h3>ก๊วนเพื่อน</h3><p>ชวนเพื่อนบ้านมาเดินด้วยกัน คนแปลกหน้าเข้าไม่ได้</p><a href="app#/team">ดูในแอป</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-how">
+    <div class="wrap">
+      <h2 id="h-how" data-anim>ใช้แค่ 3 ขั้น</h2>
+      <ol class="how" id="how">
+        <li data-anim><img src="assets/character/greet.png" alt="" loading="lazy"><b>1</b><span>หนีบที่เอว</span></li>
+        <li data-anim style="--d:.15s"><img src="assets/character/run.png" alt="" loading="lazy"><b>2</b><span>ออกไปเดิน</span></li>
+        <li data-anim style="--d:.3s"><img src="assets/character/happy.png" alt="" loading="lazy"><b>3</b><span>ดูตัวละครโต</span></li>
+      </ol>
+      <div class="end" data-anim>
+        <a class="btn-cta" href="app#/step">ลองใช้แอป</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>ก้าวรวมใจ · รางวัลนวัตกรแห่งจุฬาฯ 2570</span>
+    <span>ไม่ใช่เครื่องมือแพทย์ · ตัวเลขในแอปเป็นข้อมูลตัวอย่าง · <a href="credits">แหล่งข้อมูล</a></span>
+  </div>
+</footer>
+<script nomodule src="js/nomodule.js"></script>
+<script type="module" src="js/site.js"></script>
+</body>
+</html>
